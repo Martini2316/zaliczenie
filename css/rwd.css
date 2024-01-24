@@ -1,0 +1,650 @@
+/* Styl dla małego ekranu (do 484 pikseli szerokości) */
+@media only screen and (max-width: 484px) {
+
+/* ==========HOME PAGE========= */
+#homepage{
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+#homePage_container{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#homePage_container .tileText{
+    margin: 0;
+    margin-top: 100px;
+    max-width: 484px;
+    box-sizing: border-box;
+    padding: 0;
+}
+#homePage_container .tileText h1{
+    font-size: 1.3rem;
+    max-width: 484px;
+    text-align: center;
+}
+
+#homePage_container .tileText .tileText-inside{
+    padding: 0;
+    margin: 25px;
+    margin-top: 50px;
+    border: none;
+}
+#homePage_container .tileText-inside p{
+    margin: 0;
+    padding:40px;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 1%;
+    max-width: 400px;
+    font-size: 1rem;
+}
+#homePage_container #learnMoreBtn{
+    margin: 0;
+    margin-left: 26%;
+    padding: 0;
+}
+#homepage video{
+    display: none;
+}
+
+/* =====HISTORIA===== */
+#history{
+    background-image: none;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+#history .history-container{
+    margin: 0;
+    padding: 0;
+}
+#history .history-tile-image{
+    display: none;
+}
+#history .history-tile-text{
+    margin: 0;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    text-align: center;
+}
+#history .history-tile-text h1{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 2rem;
+    margin: 20px auto;   
+    text-align: center; 
+}
+#history .history-tile-text p{
+    font-size: 14px;
+}
+#history .history-tile-text button {
+    width: 160px;
+    height: 40px;
+    margin-top: 30px;
+}
+/* =====TECHNOLOGIA===== */
+#technology{
+    margin: 0;
+    padding: 5px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+#technology h1{
+    font-size: 2rem;
+}
+#technology .technology-container{
+    margin: 0;
+    margin-top: 10px;
+    padding: 1rem;
+    display: flex;
+}
+#technology .technology-tile-list{
+    display: none;
+}
+#technology .technology-tile-text {
+    margin: 0;
+    padding: 1.5rem;
+    border: none;
+    font-size: .9rem;
+    min-width: 350px;
+    max-height: 300px;
+    box-sizing: border-box;
+}
+#technology .temporary{
+    display: block;
+    position:absolute;
+    margin-top: 410px;
+}
+#technology .temporary2{
+    display: block;
+    position:absolute;
+    margin-top: 310px;
+    width: 70px;
+    left: 0;
+    margin-left: 40px;
+}
+#technology .temporary3{
+    display: block;
+    position:absolute;
+    margin-top: 310px;
+    width: 70px;
+    right: 0;
+    margin-right: 40px;
+}
+/* =====RAKIETY===== */
+#rockets-fl1{
+    display: block;
+}
+.rockets-information{
+    max-height: 400px;
+    overflow: auto;
+}
+/* =====TECHNOLOGIA ODZYSKANIA===== */
+
+#Technology-usage {
+    background: rgb(0,0,0);
+    background: linear-gradient(135deg, rgba(0,0,0,1) 7%, rgba(79,117,156,1) 46%, rgba(0,0,0,1) 84%);
+    margin: 0;
+    padding: 1rem;
+    box-sizing: border-box;
+    overflow: auto;
+    max-height: 600px;
+}
+#Technology-usage .Technology-usage-container {
+    background: none;
+    box-sizing: border-box;
+    padding: 2rem;
+    display: block;
+}
+#Technology-usage .tech-use-tile-left {
+    margin: 0;
+    margin-top: 30px;
+    background-color: rgba(255, 255, 255, 0.3);
+    max-height: 400px;
+    padding: 0;
+    width: 100%;
+}
+#Technology-usage .tech-use-tile-left p{
+    box-sizing: border-box;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: 1rem;
+}
+#Technology-usage .temp-tiles{
+    display: none;
+}
+#Technology-usage .Technology-usage-container{
+    text-align: center;
+}
+#Technology-usage .temp-butt{
+    width: 100px;
+    height: 40px;
+    font-size: 2rem;
+    margin: 30px;
+}
+#Technology-usage video{
+    display: none;
+}
+.adapt-kontener .adapt-ha1{
+    font-size: 35px;
+}
+.adapt-kontener .adapt-box-container .adapt-box h1{
+    font-size: 30px;
+}
+.adapt-kontener .adapt-box-container .adapt-box p{
+    font-size: 0.9rem;
+    letter-spacing: 0px;
+    margin-top: 10px;
+}
+.mission--kontener .mission--ha1{
+    font-size: 35px;
+}
+
+}
+
+
+
+
+/* Styl dla małego ekranu (do 767 pikseli szerokości) */
+@media only screen and (min-width: 485px) and (max-width: 767px) {
+    #homepage{
+        background-color: black;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        text-align: center;
+    }
+    #homePage_container{
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    #homePage_container .tileText{
+        margin: 0;
+        margin-top: 100px;
+        max-width: 767px;
+        box-sizing: border-box;
+        padding: 0;
+    }
+    #homePage_container .tileText h1{
+        font-size: 1.8rem;
+        max-width: 767px;
+        text-align: center;
+    }
+    
+    #homePage_container .tileText .tileText-inside{
+        padding: 0;
+        margin: 25px;
+        margin-top: 50px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+    }
+    #homePage_container .tileText .tileText-inside p{
+        margin: 0;
+        padding:40px;
+        box-sizing: border-box;
+        text-align: center;
+        max-width: 500px;
+        font-size: 1rem;
+    }
+    #homePage_container #learnMoreBtn{
+        margin: 0;
+        padding: 0;
+    }
+    #homepage video{
+        display: none;
+    }
+/* =====HISTORIA===== */
+#history{
+    background-image: none;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+#history .history-container{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+#history .history-tile-image{
+    display: none;
+}
+#history .history-tile-text{
+    margin: 0;
+    padding: 3.6rem;
+    box-sizing: border-box;
+    text-align: center;
+}
+#history .history-tile-text h1{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 2rem;
+    margin: 20px auto;   
+    text-align: center; 
+}
+#history .history-tile-text p{
+    font-size: 14px;
+}
+#history .history-tile-text button {
+    width: 160px;
+    height: 40px;
+    margin-top: 70px;
+}
+/* =====TECHNOLOGIA===== */
+#technology{
+    margin: 0;
+    padding: 5px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+#technology h1{
+    font-size: 2rem;
+}
+#technology .technology-container{
+    margin: 0;
+    margin-top: 10px;
+    padding: 1rem;
+    display: flex;
+}
+#technology .technology-tile-list{
+    display: none;
+}
+#technology .technology-tile-text {
+    margin: 0;
+    padding: 1.5rem;
+    border: none;
+    font-size: .9rem;
+    min-width: 350px;
+    max-height: 300px;
+    box-sizing: border-box;
+}
+#technology .temporary{
+    display: block;
+    position:absolute;
+    margin-top: 410px;
+}
+#technology .temporary2{
+    display: block;
+    position:absolute;
+    margin-top: 310px;
+    width: 70px;
+    left: 0;
+    margin-left: 40px;
+}
+#technology .temporary3{
+    display: block;
+    position:absolute;
+    margin-top: 310px;
+    width: 70px;
+    right: 0;
+    margin-right: 40px;
+}
+/* =====RAKIETY===== */
+#rockets-fl1{
+    display: block;
+}
+.rockets-information{
+    max-width: 600px;
+    max-height: 300px;
+    overflow: auto;
+}
+.rockets-information button{
+    margin: 0;
+}
+.slider-wrapper{
+    width: 400px;
+}
+/* =====TECHNOLOGIA ODZYSKANIA===== */
+
+#Technology-usage {
+    background: rgb(0,0,0);
+    background: linear-gradient(135deg, rgba(0,0,0,1) 7%, rgba(79,117,156,1) 46%, rgba(0,0,0,1) 84%);
+    margin: 0;
+    padding: 1rem;
+    box-sizing: border-box;
+    overflow: auto;
+    max-height: 600px;
+}
+#Technology-usage .Technology-usage-container {
+    background: none;
+    box-sizing: border-box;
+    padding: 2rem;
+    display: block;
+}
+#Technology-usage .tech-use-tile-left {
+    margin: 0;
+    margin-top: 30px;
+    background-color: rgba(255, 255, 255, 0.3);
+    max-height: 300px;
+    padding: 0;
+    width: 100%;
+}
+#Technology-usage .tech-use-tile-left p{
+    box-sizing: border-box;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: 1rem;
+}
+#Technology-usage .temp-tiles{
+    display: none;
+}
+#Technology-usage .Technology-usage-container{
+    text-align: center;
+}
+#Technology-usage .temp-butt{
+    width: 100px;
+    height: 40px;
+    font-size: 2rem;
+    margin: 30px;
+}
+#Technology-usage video{
+    display: none;
+}
+.adapt-kontener .adapt-ha1{
+    font-size: 35px;
+}
+.adapt-kontener .adapt-box-container .adapt-box h1{
+    font-size: 30px;
+}
+.adapt-kontener .adapt-box-container .adapt-box p{
+    font-size: 0.9rem;
+    letter-spacing: 0px;
+    margin-top: 10px;
+}
+.mission--kontener .mission--ha1{
+    font-size: 35px;
+}
+}
+
+/* Styl dla tabletu (768 do 1023 pikseli) */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    #homepage{
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        text-align: center;
+    }
+    #homePage_container{
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    #homePage_container .tileText{
+        margin: 0;
+        margin-top: 100px;
+        max-width: 767px;
+        box-sizing: border-box;
+        padding: 0;
+    }
+    #homePage_container .tileText h1{
+        font-size: 1.8rem;
+        max-width: 767px;
+        text-align: center;
+    }
+    
+    #homePage_container .tileText .tileText-inside{
+        padding: 0;
+        margin: 25px;
+        margin-top: 50px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+    }
+    #homePage_container .tileText .tileText-inside p{
+        margin: 0;
+        padding:40px;
+        box-sizing: border-box;
+        text-align: center;
+        max-width: 500px;
+        font-size: 1rem;
+    }
+    #homePage_container #learnMoreBtn{
+        margin: 0;
+        padding: 0;
+    }
+/* =====HISTORIA===== */
+#history{
+    /* background-image: none; */
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+#history .history-container{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    align-items: center;
+}
+#history .history-tile-image{
+    /* display: none; */
+    max-height: 400px;
+    overflow: hidden;
+}
+#history .history-tile-text{
+    margin: 0;
+    padding: 3.6rem;
+    box-sizing: border-box;
+    text-align: center;
+}
+#history .history-tile-text h1{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 2rem;
+    margin: 20px auto;   
+    text-align: center; 
+}
+#history .history-tile-text p{
+    font-size: 14px;
+}
+#history .history-tile-text button {
+    width: 160px;
+    height: 40px;
+    margin-top: 10px;
+}
+/* =====TECHNOLOGIA===== */
+#technology{
+    margin: 0;
+    padding: 5px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+#technology h1{
+    font-size: 2rem;
+}
+#technology .technology-container{
+    margin: 0;
+    margin-top: 10px;
+    padding: 1rem;
+    display: flex;
+}
+#technology .technology-tile-list{
+    display: none;
+}
+#technology .technology-tile-text {
+    margin: 0;
+    padding: 1.5rem;
+    border: none;
+    font-size: .9rem;
+    min-width: 350px;
+    max-height: 300px;
+    box-sizing: border-box;
+}
+#technology .temporary{
+    display: block;
+    position:absolute;
+    margin-top: 410px;
+}
+#technology .temporary2{
+    display: block;
+    position:absolute;
+    margin-top: 310px;
+    width: 70px;
+    left: 0;
+    margin-left: 138px;
+}
+#technology .temporary3{
+    display: block;
+    position:absolute;
+    margin-top: 310px;
+    width: 70px;
+    right: 0;
+    margin-right: 138px;
+}
+/* =====RAKIETY===== */
+#rockets-fl1{
+    display: block;
+}
+.rockets-information{
+    max-width: 600px;
+    max-height: 300px;
+    overflow: auto;
+}
+.rockets-information button{
+    margin: 0;
+}
+.slider-wrapper{
+    width: 400px;
+}
+/* =====TECHNOLOGIA ODZYSKANIA===== */
+
+#Technology-usage {
+    background: rgb(0,0,0);
+    background: linear-gradient(135deg, rgba(0,0,0,1) 7%, rgba(79,117,156,1) 46%, rgba(0,0,0,1) 84%);
+    margin: 0;
+    padding: 1rem;
+    box-sizing: border-box;
+    overflow: auto;
+    max-height: 600px;
+}
+#Technology-usage .Technology-usage-container {
+    background: none;
+    box-sizing: border-box;
+    padding: 2rem;
+    display: block;
+}
+#Technology-usage .tech-use-tile-left {
+    margin: 0;
+    margin-top: 30px;
+    background-color: rgba(255, 255, 255, 0.3);
+    max-height: 300px;
+    padding: 0;
+    width: 100%;
+}
+#Technology-usage .tech-use-tile-left p{
+    box-sizing: border-box;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: 1rem;
+}
+#Technology-usage .temp-tiles{
+    display: none;
+}
+#Technology-usage .Technology-usage-container{
+    text-align: center;
+}
+#Technology-usage .temp-butt{
+    width: 100px;
+    height: 40px;
+    font-size: 2rem;
+    margin: 30px;
+}
+#Technology-usage video{
+    display: none;
+}
+.adapt-kontener .adapt-ha1{
+    font-size: 35px;
+}
+.adapt-kontener .adapt-box-container .adapt-box h1{
+    font-size: 30px;
+}
+.adapt-kontener .adapt-box-container .adapt-box p{
+    font-size: 0.9rem;
+    letter-spacing: 0px;
+    margin-top: 10px;
+}
+.mission--kontener .mission--ha1{
+    font-size: 35px;
+}
+} 

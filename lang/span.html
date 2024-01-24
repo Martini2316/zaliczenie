@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/rwd.css">
+    <title>SpaceXwiki</title>
+</head>
+<body onload="Loader()">
+
+<header class="header" id="heed">
+    <nav class="nav container">
+        <div class="nav__data">
+            <a href="#" onclick="appearHomePage()" class="nav__logo">
+                SpaceX<span id="logoSpan">wiki</span>
+            </a>
+            
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line nav__burger"></i>
+                <i class="ri-close-line nav__close"></i>
+            </div>
+        </div>
+
+        <!--=============== NAV MENU ===============-->
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+                <li><a href="#" onclick="appearHomePage()" class="nav__link">Hogar</a></li>
+
+                <li><a href="#" onclick="appearHistory()" class="nav__link">Historia</a></li>
+                <li><a href="#" onclick="appearTechnologyPage()" class="nav__link">Tecnología</a></li>
+
+                <!--=============== DROPDOWN 1 ===============-->
+                <li class="dropdown__item">
+                <div class="nav__link">
+                    Cohetes <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                </div>
+
+                <ul class="dropdown__menu">
+                    <li>
+                        <a href="#" onclick="appearFl1Page()" class="dropdown__link">
+                            <i class="ri-rocket-line"></i> Falcon 1
+                        </a>                          
+                    </li>
+
+                    <li>
+                        <a href="#" onclick="appearFl9Page()" class="dropdown__link">
+                            <i class="ri-rocket-line"></i> Falcon9
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#" onclick="appearFlhPage()" class="dropdown__link">
+                            <i class="ri-rocket-line"></i> Falcon Heavy
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#" onclick="appearStarshipPage()" class="dropdown__link">
+                            <i class="ri-rocket-line"></i> Starship
+                        </a>
+                    </li>
+
+                    <!--=============== DROPDOWN SUBMENU ===============-->
+                    <li class="dropdown__subitem">
+                        <div class="dropdown__link">
+                            <i class="ri-more-line"></i> Más <i class="ri-add-line dropdown__add"></i>
+                        </div>
+
+                        <ul class="dropdown__submenu">
+                            <li>
+                            <a href="#" onclick="appearTechUse()" class="dropdown__sublink">
+                                <i class="ri-skip-right-fill"></i> Tecnología reutilizable
+                            </a>
+                            </li>
+    
+                            <li>
+                            <a href="#" onclick="appearProduction()" class="dropdown__sublink">
+                                <i class="ri-skip-right-fill"></i> Proceso de producción
+                            </a>
+                            </li>
+    
+                            <li>
+                            <a href="#" onclick="appearAdapt()" class="dropdown__sublink">
+                                <i class="ri-skip-right-fill"></i> Aplicaciones de cohetes
+                            </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                </li>
+
+                <!--=============== DROPDOWN 2 ===============-->
+                <li class="dropdown__item">
+                <div class="nav__link">
+                    Misiones espaciales <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                </div>
+
+                <ul class="dropdown__menu">
+
+                    <li>
+                        <a href="#" onclick="appearMissionPlans()" class="dropdown__link">
+                            <i class="ri-focus-3-line"></i> Misiones planeadas
+                        </a>
+                    </li>
+                </ul>
+                </li>
+
+                <li><a href="#" onclick="appearMissionGallery()" class="nav__link">Galería</a></li>
+
+                <li class="dropdown__item">
+                    <div class="nav__link">
+                        <i class="ri-earth-line"></i>Idioma <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                    </div>
+    
+                    <ul class="dropdown__menu">
+                        <li>
+                            <a href="../index.html" class="dropdown__link">
+                                <i class="ri-global-line"></i> POLACO
+                            </a>                          
+                        </li>
+    
+                        <li>
+                            <a href="eng.html" class="dropdown__link">
+                                <i class="ri-global-line"></i> INGLÉS
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="de.html" class="dropdown__link">
+                                <i class="ri-global-line"></i> ALEMÁN
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="dropdown__link">
+                                <i class="ri-global-line"></i> ESPAÑOL
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="fr.html" class="dropdown__link">
+                                <i class="ri-global-line"></i> FRANCÉS
+                            </a>
+                        </li>
+                    </ul>
+                    </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<section id="loader">
+</section>
+
+<section id="homepage">
+
+    <video autoplay muted loop controlsList="nodownload nofullscreen" disablepictureinpicture id="myVideo">
+        <source src="../assets/SpaceX2.mp4" type="video/mp4">
+    </video>
+
+    <div id="homePage_container">
+        <div class="tileText">
+            <h1>Bienvenido a SpaceX<span id="logoSpan">Wiki</span></h1>
+            <div class="tileText-inside">                
+                <p>Tu fuente de información sobre tecnologías espaciales pioneras, misiones exploratorias y visiones del futuro de la exploración espacial. ¡Siéntete libre de sumergirte en el fascinante mundo de los logros cósmicos!</p>
+            </div>            
+            <button id="learnMoreBtn" onclick="appearHistory()">¡Más!</i></button>
+
+        </div>
+    </div>
+</section>
+
+<section id="history">
+
+    <div class="history-container">
+        <div class="history-tile-image"></div>
+        <div class="history-tile-text">
+            <h1>Historia de SpaceX</h1>
+            <p>SpaceX, conocida oficialmente como Space Exploration Technologies Corp., fue fundada por Elon Musk en 2002 con el objetivo de reducir los costos de acceso al espacio y posibilitar la colonización de Marte. En 2008, la compañía logró un avance al lanzar el primer satélite privado en órbita utilizando el cohete <span onclick="appearFl1Page()" style="color: red; cursor: pointer;">Falcon 1</span>. Los años siguientes trajeron éxitos, incluyendo el desarrollo de cohetes reutilizables <span onclick="appearFl9Page()" style="color: red; cursor: pointer;">Falcon 9</span> y naves espaciales tripuladas como Dragon Crew. SpaceX se convirtió en un socio clave para la NASA, suministrando la Estación Espacial Internacional y liderando avances en tecnología de cohetes.</p>
+
+            <button id="learnMoreBtn2" onclick="appearTechnologyPage()" style="font-size: 18px;">Tecnología</button>
+
+        </div>
+    </div>
+    
+</section>
+
+<section id="technology">
+
+    <h1>Tecnología</h1>
+    <div class="technology-container">
+        <div class="technology-tile-list">
+            <p>Elige tecnologías</p>
+            <ol>
+                <li><a href="#" onclick="techLi1()">Sistema de Aterrizaje de la Primera Etapa</a></li>
+                <li><a href="#" onclick="techLi2()">Cohetes de Combustible Líquido</a></li>
+                <li><a href="#" onclick="techLi3()">Sistema de Navegación Autónoma</a></li>
+                <li><a href="#" onclick="techLi4()">Integración con Tecnología de la Información</a></li>
+                <li><a href="#" onclick="techLi5()">Comunicación Satelital</a></li>
+                <button id="learnMoreBtn2" onclick="appearFl1Page()" style="font-size: 18px;">Cohetes</button>
+            </ol>
+        </div>
+        <div class="technology-tile-text" id="techTextField">
+            El sistema de aterrizaje de la primera etapa de los cohetes de SpaceX es una tecnología innovadora que permite reutilizar el cohete múltiples veces. Después de separarse del resto del portador, la primera etapa regresa a la Tierra, realizando maniobras de aterrizaje precisas en una plataforma ya sea en el mar o en tierra. Este proceso innovador reduce significativamente los costos de las misiones espaciales, siendo un elemento clave en la estrategia de SpaceX para la exploración espacial sostenible. Gracias a este enfoque, la compañía logra eficiencia que antes era inalcanzable en los sistemas de cohetes tradicionales.
+        </div>
+        
+        <button id="learnMoreBtn2" class="temporary2" onclick="removeCounter()" style="font-size: 16px;"><i class="ri-arrow-left-line"></i></button>
+        <button id="learnMoreBtn2" class="temporary3" onclick="addCounter()" style="font-size: 16px;"><i class="ri-arrow-right-line"></i></button>
+        <button id="learnMoreBtn2" class="temporary" onclick="appearFl1Page()" style="font-size: 14px;">Cohetes</button>
+    </div>   
+
+</section>
+
+<section id="rockets-fl1">
+    <div class="slider-wrapper">
+        <div class="slider">
+            <img id="slide-1" src="../assets/fl1/fl1-1.jpeg" alt="Falcon 1">
+            <img id="slide-2" src="../assets/fl1/fl1-2.jpg" alt="Falcon 1">
+            <img id="slide-3" src="../assets/fl1/fl1-3.jpg" alt="Falcon 1">
+        </div>
+        <div class="slider-nav">
+            <a href="#slide-1"></a>
+            <a href="#slide-2"></a>
+            <a href="#slide-3"></a> 
+        </div>
+    </div>        
+
+    <div class="rockets-information">
+        <span style="color: red; letter-spacing: 2px;">Falcon 1</span> es el primer vehículo de lanzamiento producido por SpaceX. Su vuelo inaugural tuvo lugar el 24 de marzo de 2006. El cohete tenía una capacidad de carga de aproximadamente 670 kilogramos a la Órbita Terrestre Baja (LEO) y estaba propulsado por el motor Merlin 1C, alcanzando una velocidad orbital de aproximadamente 28,000 km/h. Desafortunadamente, los primeros tres lanzamientos terminaron en fracaso. Sin embargo, el 28 de septiembre de 2008, Falcon 1 alcanzó con éxito la órbita, convirtiéndose en el primer cohete privado en lograr esta hazaña.
+
+
+        <button id="learnMoreBtn3" onclick="appearFl9Page()" style="font-size: 30px;"><i class="ri-skip-down-line"></i></button>
+    </div>
+
+</section>
+
+<section id="rockets-fl9">
+
+    <div class="rockets-fl9-container">
+        <div class="slider-wrapper">
+            <div class="slider">
+                <img id="slide-4" src="../assets/fl9/fl9-1.jpg" alt="Falcon 9">
+                <img id="slide-5" src="../assets/fl9/fl9-2.jpg" alt="Falcon 9">
+                <img id="slide-6" src="../assets/fl9/fl9-3.jpg" alt="Falcon 9">
+            </div>
+            <div class="slider-nav">
+                <a href="#slide-4"></a>
+                <a href="#slide-5"></a>
+                <a href="#slide-6"></a> 
+            </div>
+        </div>  
+    </div>   
+    
+    <div class="rockets-information">
+        <span style="color: red; letter-spacing: 2px;">Falcon 9</span> es un vehículo de lanzamiento reutilizable desarrollado por SpaceX. Su vuelo inaugural tuvo lugar el 4 de junio de 2010. El cohete está diseñado para transportar cargas útiles a la Órbita Terrestre Baja (LEO) y la Órbita de Transferencia Geoestacionaria (GTO). Falcon 9 está equipado con nueve motores Merlin 1D y puede transportar cargas útiles de hasta 22,800 kilogramos a LEO. Sin embargo, gracias a la tecnología reutilizable, la primera etapa de Falcon 9 puede regresar a la Tierra, aterrizando en plataformas en el mar o en tierra, reduciendo significativamente los costos de acceso al espacio.
+
+
+        <button id="learnMoreBtn3" onclick="appearFlhPage()" style="font-size: 30px;"><i class="ri-skip-down-line"></i></button>
+    </div>
+
+</section>
+
+<section id="rockets-flH">
+
+    <div class="rockets-flH-container">
+        <div class="rockets-fl9-container">
+            <div class="slider-wrapper">
+                <div class="slider">
+                    <img id="slide-7" src="../assets/flh/flh-1.jpeg" alt="Falcon Heavy">
+                    <img id="slide-8" src="../assets/flh/flh-2.jpg" alt="Falcon Heavy">
+                    <img id="slide-9" src="../assets/flh/flh-3.jpg" alt="Falcon Heavy">
+                </div>
+                <div class="slider-nav">
+                    <a href="#slide-7"></a>
+                    <a href="#slide-8"></a>
+                    <a href="#slide-9"></a> 
+                </div>
+            </div>  
+        </div> 
+    </div>    
+    <div class="rockets-information">
+        <span style="color: red; letter-spacing: 2px;">Falcon Heavy</span> es uno de los vehículos de lanzamiento más potentes del mundo, también desarrollado por SpaceX. Su primer vuelo exitoso tuvo lugar el 6 de febrero de 2018. Falcon Heavy consta de tres cohetes Falcon 9 integrados, convirtiéndolo en un formidable sistema de transporte espacial. El cohete puede transportar cargas masivas a varias órbitas, con una capacidad de carga de hasta 64 toneladas a la Órbita Terrestre Baja (LEO) y 16.8 toneladas a la Órbita de Transferencia Geoestacionaria (GTO). Al igual que Falcon 9, las etapas principales de Falcon Heavy están diseñadas para ser reutilizables, mejorando aún más la eficiencia y competitividad del cohete en el mercado espacial.
+
+
+        <button id="learnMoreBtn3" onclick="appearStarshipPage()" style="font-size: 30px;"><i class="ri-skip-down-line"></i></button>
+    </div>
+
+</section>
+
+<section id="rockets-StarShip">
+
+    <div class="rockets-StarShip-container">
+        <div class="rockets-flH-container">
+            <div class="rockets-fl9-container">
+                <div class="slider-wrapper">
+                    <div class="slider">
+                        <img id="slide-10" src="../assets/starShip/starShip-1.jpeg" alt="Starship">
+                        <img id="slide-11" src="../assets/starShip/starShip-2.jpg" alt="Starship">
+                        <img id="slide-12" src="../assets/starShip/starShip-3.jpg" alt="Starship">
+                    </div>
+                    <div class="slider-nav">
+                        <a href="#slide-10"></a>
+                        <a href="#slide-11"></a>
+                        <a href="#slide-12"></a> 
+                    </div>
+                </div>  
+            </div> 
+        </div>   
+    </div>    
+    <div class="rockets-information">        
+        <span style="color: red; letter-spacing: 2px;">STARSHIP</span>, la última innovación de SpaceX, es un completo cohete multiusos con Super Heavy como su potente primera etapa y una avanzada nave espacial. Diseñado para ser reutilizable, el cohete tiene la capacidad de transportar cargas útiles de hasta 100 toneladas a la Órbita Terrestre Baja (LEO), convirtiéndolo en un medio de transporte potencialmente crucial para futuras misiones de exploración. Incorpora las últimas tecnologías, como motores Raptor y materiales compuestos innovadores, para lograr objetivos avanzados en el campo de la exploración espacial.
+
+
+        <button id="learnMoreBtn3" onclick="appearTechUse()" style="font-size: 25px;"><i class="ri-skip-down-line"></i></button>
+    </div>
+
+</section>
+
+<section id="Technology-usage">
+
+    <video autoplay muted loop controlsList="nodownload nofullscreen" disablepictureinpicture id="myVideo2">
+        <source src="../assets/landing.mp4" type="video/mp4">
+    </video>
+
+    <div id="returnVideo" class="Technology-usage-container">
+        <div id="techUse1" class="tech-use-tile-left">
+            <h1>Recuperación de la Primera Etapa</h1>    
+            <p>
+                La tecnología reutilizable en los cohetes de SpaceX comienza con la recuperación precisa de las primeras etapas de los cohetes después de separarse del resto del portador. Sistemas avanzados de navegación y control permiten un descenso controlado y un aterrizaje preciso de las primeras etapas en plataformas especiales en el mar o en tierra. Este proceso no solo reduce los costos de las misiones espaciales, sino que también marca un paso significativo hacia un enfoque sostenible de la exploración espacial.
+            </p>
+        </div>
+        <div id="techUse2" class="tech-use-tile-left">
+            <h1>Proceso de Recuperación para Reutilización</h1>    
+            <p>
+                Después de un aterrizaje exitoso, las primeras etapas pasan por un meticuloso proceso de reacondicionamiento. Equipos especializados de ingenieros realizan análisis detallados e inspecciones técnicas, examinando cada elemento en cuanto a rendimiento y durabilidad. Los fabricantes de cohetes de SpaceX utilizan tecnologías modernas, como la impresión 3D, para reparar, mejorar y adaptar los componentes recuperados para misiones espaciales subsiguientes.
+            </p>
+        </div>
+        <div id="techUse3" class="tech-use-tile-left">
+            <h1>Impacto en Costos y Durabilidad</h1>
+            <p>
+                La tecnología reutilizable tiene un impacto tremendo en los costos de las misiones espaciales y la durabilidad de la infraestructura de los cohetes. A través del uso repetido de las primeras etapas, SpaceX logra una reducción significativa en los costos, haciendo que la exploración espacial sea más accesible. Además, esta práctica sostenible también reduce el impacto ambiental al eliminar la necesidad de producir nuevos cohetes para cada misión. La tecnología reutilizable de SpaceX es un paso hacia un futuro más eficiente y sostenible para los viajes espaciales.
+            </p>
+        </div>
+        
+        <button id="hideTiles" class="temp-tiles" onclick="hidetiles()">Ocultar mosaicos</button>
+        <button id="showTiles" onclick="showtiles()">Mostrar mosaicos</button>
+
+        <button id="nextOne" class="temp-butt" onclick="appearProduction()"><i class="ri-skip-down-line"></i></button>
+    </div>    
+
+</section>
+
+<section id="production-process">
+    <div class="kontener">
+        <h1 class="production-ha1">PROCESO DE PRODUCCIÓN</h1>
+<div class="production-box-container">
+    <div class="production-box">
+        <h1>Tecnologías Avanzadas de Producción</h1>
+        <p>La producción de cohetes en las instalaciones de SpaceX es un proceso basado en tecnologías avanzadas. Los sistemas de ensamblaje automatizado y los robots son integrales, reduciendo el tiempo de producción y mejorando la eficiencia. Este enfoque permite la creación rápida de componentes complejos manteniendo los más altos estándares de calidad.</p>
+    </div>
+
+    <div class="production-box">
+        <h1>Innovaciones en Materiales y Estructuras</h1>
+        <p>Los ingenieros de SpaceX invierten en la mejora continua de materiales compuestos y estructuras de cohetes. Materiales modernos resistentes a las condiciones espaciales interactúan con estructuras innovadoras, garantizando soluciones ligeras y duraderas. Este enfoque avanzado aumenta la eficiencia de las construcciones de cohetes.</p>
+    </div>
+
+    <div class="production-box">
+        <h1>Impresión 3D en el Proceso de Producción</h1>
+        <p>La impresión 3D es una tecnología clave en la producción de cohetes de SpaceX. La flexibilidad y velocidad de este proceso permiten la creación de componentes complejos adaptados a los requisitos específicos de los viajes espaciales. La impresión 3D en el proceso de producción también introduce un enfoque innovador para dar forma a las estructuras de cohetes.</p>
+    </div>
+
+    <div class="production-box">
+        <h1>Control de Calidad Preciso</h1>
+        <p>Cada etapa de la producción de cohetes se somete a rigurosos estándares de control de calidad preciso. Equipos especializados de ingenieros garantizan la más alta calidad para cada elemento, crucial para la seguridad y eficacia de los cohetes. El control de calidad preciso es una parte integral del proceso, eliminando posibles problemas antes de las misiones espaciales.</p>
+    </div>
+
+    <div class="production-box">
+        <h1>Recuperación y Reacondicionamiento para Reutilización</h1>
+        <p>Después de misiones exitosas, las primeras etapas de los cohetes se recuperan con precisión y se someten a un proceso de reacondicionamiento para su reutilización. Inspecciones técnicas complejas y tecnologías innovadoras, como la impresión 3D, respaldan este proceso. Este enfoque de producción sostenible se alinea con la estrategia a largo plazo de SpaceX.</p>
+    </div>
+
+    <button id="learnMoreBtn4" onclick="appearAdapt()" style="font-size: 30px;"><i class="ri-skip-down-line"></i></button>
+</div>
+
+    </div>
+        
+    
+</section>
+
+<section id="adapt">
+
+    <div class="adapt-container">
+        <div class="adapt-kontener">
+            <h1 class="adapt-ha1">APLICACIONES DE LOS COHETES</h1>
+<div class="adapt-box-container">
+    <div class="adapt-box">
+        <h1>Revolución Espacial de SpaceX</h1>
+        <p>
+            Los cohetes de SpaceX tienen una amplia aplicación en el campo de la exploración espacial. Principalmente, desempeñan un papel crucial en la entrega de satélites a varias órbitas, permitiendo la comunicación, la observación de la Tierra y la investigación científica. Estos cohetes también son esenciales para suministrar la Estación Espacial Internacional (ISS), proporcionando misiones tripuladas, equipos y materiales científicos a los astronautas.
+
+            En el contexto de las misiones espaciales tripuladas, el cohete Crew Dragon de SpaceX introduce una nueva era en el transporte de astronautas, permitiendo el movimiento seguro de personas hacia la órbita, lo cual es vital para futuras misiones espaciales y la exploración espacial. Además, mirando hacia el futuro, se incluyen planes ambiciosos para la colonización de Marte, donde el cohete Starship tiene el potencial de transportar personas y carga al Planeta Rojo, abriendo la puerta al objetivo a largo plazo de establecer a los humanos más allá de los límites de la Tierra. De esta manera, los cohetes de SpaceX se convierten en una herramienta clave en la búsqueda de expandir los límites de la presencia humana en el espacio.
+        </p>
+    </div>
+</div>
+
+            <button id="learnMoreBtn5" onclick="appearMissionPlans()" style="font-size: 30px;"><i class="ri-skip-down-line"></i></button>
+        </div>
+    </div>    
+
+</section>
+
+<section id="mission-plans">
+
+    <div class="mission--kontener">
+        <h1 class="mission--ha1">MISIONES PLANEADAS</h1>
+<div class="mission--box-container">
+    <div class="mission--box">
+        <h1>Misiones Crew Dragon a la ISS</h1>
+        <p>Continuación de vuelos tripulados a la Estación Espacial Internacional (ISS) utilizando la nave espacial Crew Dragon. Estas misiones son cruciales para mantener la continuidad del suministro a la ISS y desarrollar capacidades para los viajes espaciales tripulados.</p>
+    </div>
+
+    <div class="mission--box">
+        <h1>Misiones Starship a Marte</h1>
+        <p>Planes ambiciosos para la colonización de Marte incluyen el envío de misiones de suministro, exploración y, finalmente, tripuladas al Planeta Rojo utilizando el cohete Starship. SpaceX tiene como objetivo inaugurar una nueva era en la exploración de Marte.</p>
+    </div>
+
+    <div class="mission--box">
+        <h1>Programa Starlink</h1>
+        <p>Continuación de la expansión de la flota de satélites Starlink como parte del programa de Internet. SpaceX planea introducir constelaciones adicionales de satélites para proporcionar acceso a Internet de banda ancha en todo el mundo.</p>
+    </div>
+
+    <div class="mission--box">
+        <h1>Misiones de Transporte Falcon 9</h1>
+        <p>Vuelos planeados y regulares de cohetes Falcon 9 con diversas cargas útiles, incluyendo satélites comerciales, misiones de investigación y misiones de suministro.</p>
+    </div>
+
+    <div class="mission--box">
+        <h1>Exploración de la Luna</h1>
+        <p>Como parte del programa Artemis de la NASA, SpaceX es un socio en la realización de misiones de suministro y tripuladas a la Luna. También están planeadas futuras misiones tripuladas Artemis utilizando la nave espacial Starship.</p>
+    </div>
+</div>
+
+    </div>   
+
+</section>
+
+<section id="gallery">
+
+    <div class="gallery-container">
+        <div class="mission-gallery-container">
+            <img src="https://blogs.nasa.gov/commercialcrew/wp-content/uploads/sites/230/2020/08/Crew-1_CEITpt2-20200612-DSC05519_2_.jpg" alt="">
+            <img src="https://www.spacex.com/static/images/locations/kennedy.jpg" alt="">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/ORBCOMM-2_%2823282658734%29.jpg" alt="">
+            <img src="https://images.theconversation.com/files/10787/original/54954sbn-1337307547.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip" alt="">
+            <img src="https://www.americaspace.com/wp-content/uploads/2023/09/spacex.jpg" alt="">
+            <img src="https://www.asdnews.com/NewsImages/b/74847/78436_O.jpg" alt="">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Starlink_Mission_%2847926144123%29.jpg" alt="">
+            <img src="https://s.france24.com/media/display/86f0c1da-1683-11ec-a10d-005056a90284/w:980/p:16x9/2021-09-16T000802Z_1015205370_HP1EH9G00DA03_RTRMADP_3_SPACE-EXPLORATION-SPACEX.JPG" alt="">
+            <img src="https://scx2.b-cdn.net/gfx/news/2018/spacexwillus.jpg" alt="">
+            <img src="https://images-assets.nasa.gov/image/jsc2023e037683/jsc2023e037683~medium.jpg" alt="">
+            <img src="https://media.cnn.com/api/v1/images/stellar/prod/200731161100-02-spacex-mission.jpg?q=w_2976,h_2224,x_0,y_0,c_fill" alt="">
+            <img src="https://hips.hearstapps.com/hmg-prod/images/27449863849-709e135a98-o-1517341241.jpg" alt="">
+            <img src="https://images.interestingengineering.com/1200x675/filters:format(webp)/2023/01/17/image/jpeg/hstIa6uTAe6W2pHqjLULfHHJLaS7Gfpjygja859Q.jpg" alt="">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPgMe6ND6rqlIdMJsu2GTzqYAc6hwL4XhgVA&usqp=CAU" alt="">
+            <img src="https://www.dispatch.com/gcdn/authoring/2020/05/27/NCOD/ghows-OH-bb9fe111-9239-46bd-b784-5f68e1c2654a-d7be983f.jpeg?width=660&height=440&fit=crop&format=pjpg&auto=webp" alt="">
+            <img src="https://www.teslarati.com/wp-content/uploads/2020/12/Starship-2019-Mars-reentry-render-SpaceX-1-crop-3-c.jpg" alt="">
+            <img src="https://www.cnet.com/a/img/resize/59aff026a606fa767082eb01bc8af2f2ad99484c/hub/2018/02/08/3dcc95d9-a305-407d-9a7a-5aa80802cf45/screen-shot-2018-02-08-at-12-07-40-pm-1-1.jpg?auto=webp&fit=crop&height=675&width=1200" alt="">
+        </div>  
+    </div>    
+
+</section>
+
+<script src="../js/scriptSPA.js"></script>
+</body>
+</html>

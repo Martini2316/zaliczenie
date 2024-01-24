@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/rwd.css">
+    <title>SpaceXwiki</title>
+</head>
+<body onload="Loader()">
+
+<header class="header" id="heed">
+    <nav class="nav container">
+        <div class="nav__data">
+            <a href="#" onclick="appearHomePage()" class="nav__logo">
+                SpaceX<span id="logoSpan">WIKI</span>
+            </a>
+            
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line nav__burger"></i>
+                <i class="ri-close-line nav__close"></i>
+            </div>
+        </div>
+
+        <!--=============== NAV MENU ===============-->
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+                <li><a href="#" onclick="appearHomePage()" class="nav__link">Startseite</a></li>
+
+                <li><a href="#" onclick="appearHistory()" class="nav__link">Geschichte</a></li>
+                <li><a href="#" onclick="appearTechnologyPage()" class="nav__link">Technologie</a></li>
+
+                <!--=============== DROPDOWN 1 ===============-->
+                <li class="dropdown__item">
+                <div class="nav__link">
+                    Raketen <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                </div>
+
+                <ul class="dropdown__menu">
+                    <li>
+                        <a href="#" onclick="appearFl1Page()" class="dropdown__link">
+                            <i class="ri-rocket-line"></i> Falcon 1
+                        </a>                          
+                    </li>
+
+                    <li>
+                        <a href="#" onclick="appearFl9Page()" class="dropdown__link">
+                            <i class="ri-rocket-line"></i> Falcon9
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#" onclick="appearFlhPage()" class="dropdown__link">
+                            <i class="ri-rocket-line"></i> Falcon Heavy
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#" onclick="appearStarshipPage()" class="dropdown__link">
+                            <i class="ri-rocket-line"></i> Starship
+                        </a>
+                    </li>
+
+                    <!--=============== DROPDOWN SUBMENU ===============-->
+                    <li class="dropdown__subitem">
+                        <div class="dropdown__link">
+                            <i class="ri-more-line"></i> Mehr <i class="ri-add-line dropdown__add"></i>
+                        </div>
+
+                        <ul class="dropdown__submenu">
+                            <li>
+                            <a href="#" onclick="appearTechUse()" class="dropdown__sublink">
+                                <i class="ri-skip-right-fill"></i> Wiederverwendbare Technologie
+                            </a>
+                            </li>
+    
+                            <li>
+                            <a href="#" onclick="appearProduction()" class="dropdown__sublink">
+                                <i class="ri-skip-right-fill"></i> Produktionsprozess
+                            </a>
+                            </li>
+    
+                            <li>
+                            <a href="#" onclick="appearAdapt()" class="dropdown__sublink">
+                                <i class="ri-skip-right-fill"></i> Anwendungen von Raketen
+                            </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                </li>
+
+                <!--=============== DROPDOWN 2 ===============-->
+                <li class="dropdown__item">
+                <div class="nav__link">
+                    Weltraummissionen <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                </div>
+
+                <ul class="dropdown__menu">
+
+                    <li>
+                        <a href="#" onclick="appearMissionPlans()" class="dropdown__link">
+                            <i class="ri-focus-3-line"></i> Geplante Missionen
+                        </a>
+                    </li>
+                </ul>
+                </li>
+
+                <li><a href="#" onclick="appearMissionGallery()" class="nav__link">Galerie</a></li>
+
+                <li class="dropdown__item">
+                    <div class="nav__link">
+                        <i class="ri-earth-line"></i>Sprache <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                    </div>
+    
+                    <ul class="dropdown__menu">
+                        <li>
+                            <a href="../index.html" class="dropdown__link">
+                                <i class="ri-global-line"></i> POLEN
+                            </a>                          
+                        </li>
+    
+                        <li>
+                            <a href="eng.html" class="dropdown__link">
+                                <i class="ri-global-line"></i> ENGLISCH
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="#" class="dropdown__link">
+                                <i class="ri-global-line"></i> DEUTSCH
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="span.html" class="dropdown__link">
+                                <i class="ri-global-line"></i> SPANISCH
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="fr.html" class="dropdown__link">
+                                <i class="ri-global-line"></i> FRANZÖSISCH
+                            </a>
+                        </li>
+                    </ul>
+                    </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<section id="loader">
+</section>
+
+<section id="homepage">
+
+    <video autoplay muted loop controlsList="nodownload nofullscreen" disablepictureinpicture id="myVideo">
+        <source src="../assets/SpaceX2.mp4" type="video/mp4">
+    </video>
+
+    <div id="homePage_container">
+        <div class="tileText">
+            <h1>Willkommen bei SpaceX<span id="logoSpan">Wiki</span></h1>
+            <div class="tileText-inside">                
+                <p>Ihre Informationsquelle für wegweisende Raumfahrttechnologien, erforschende Missionen und Visionen für die Zukunft der Raumfahrterkundung. Tauchen Sie ein in die faszinierende Welt kosmischer Errungenschaften!</p>
+            </div>            
+            <button id="learnMoreBtn" onclick="appearHistory()">Mehr!</i></button>
+        </div>
+    </div>
+</section>
+
+<section id="history">
+
+    <div class="history-container">
+        <div class="history-tile-image"></div>
+        <div class="history-tile-text">
+            <h1>Geschichte von SpaceX</h1>
+            <p>SpaceX, offiziell als Space Exploration Technologies Corp. bekannt, wurde von Elon Musk im Jahr 2002 gegründet, mit dem Ziel, die Kosten für den Zugang zum Weltraum zu reduzieren und die Kolonisierung des Mars zu ermöglichen. Im Jahr 2008 erzielte das Unternehmen einen Durchbruch, indem es den ersten privaten Satelliten mit der <span onclick="appearFl1Page()" style="color: red; cursor: pointer;">Falcon 1</span>-Rakete in den Orbit beförderte. In den folgenden Jahren gab es Erfolge, darunter die Entwicklung wiederverwendbarer <span onclick="appearFl9Page()" style="color: red; cursor: pointer;">Falcon 9</span>-Raketen und bemannter Raumfahrzeuge wie Dragon Crew. SpaceX wurde ein wichtiger Partner für die NASA, lieferte die Internationale Raumstation und trieb Fortschritte in der Raketentechnologie voran.</p>
+
+            <button id="learnMoreBtn2" onclick="appearTechnologyPage()" style="font-size: 18px;">Technologie</button>
+        </div>
+    </div>
+    
+</section>
+
+<section id="technology">
+
+    <h1>TECHNOLOGIE</h1>
+    <div class="technology-container">
+        <div class="technology-tile-list">
+            <p>Wählen Sie Technologien aus</p>
+            <ol>
+                <li><a href="#" onclick="techLi1()">Erststufen-Landesystem</a></li>
+                <li><a href="#" onclick="techLi2()">Flüssigtreibstoffraketen</a></li>
+                <li><a href="#" onclick="techLi3()">Autonomes Navigationssystem</a></li>
+                <li><a href="#" onclick="techLi4()">Integration mit Informationstechnologie</a></li>
+                <li><a href="#" onclick="techLi5()">Satellitenkommunikation</a></li>
+                <button id="learnMoreBtn2" onclick="appearFl1Page()" style="font-size: 18px;">Raketen</button>
+
+            </ol>
+        </div>
+        <div class="technology-tile-text" id="techTextField">
+            Das Erststufen-Landesystem der SpaceX-Raketen ist eine bahnbrechende Technologie, die es ermöglicht, die Rakete mehrfach wiederzuverwenden. Nach der Trennung vom Rest des Trägers kehrt die erste Stufe zur Erde zurück und führt präzise Landemanöver auf einer See- oder Landplattform durch. Dieser innovative Prozess reduziert die Kosten von Raummissionen erheblich und dient als Schlüsselelement in der Strategie von SpaceX für nachhaltige Raumfahrterkundung. Dank dieses Ansatzes erreicht das Unternehmen eine Effizienz, die in herkömmlichen Raketensystemen zuvor nicht erreichbar war.
+        </div>
+        <button id="learnMoreBtn2" class="temporary2" onclick="removeCounter()" style="font-size: 16px;"><i class="ri-arrow-left-line"></i></button>
+        <button id="learnMoreBtn2" class="temporary3" onclick="addCounter()" style="font-size: 16px;"><i class="ri-arrow-right-line"></i></button>
+        <button id="learnMoreBtn2" class="temporary" onclick="appearFl1Page()" style="font-size: 14px;">Raketen</button>
+    </div>   
+
+</section>
+
+<section id="rockets-fl1">
+    <div class="slider-wrapper">
+        <div class="slider">
+            <img id="slide-1" src="../assets/fl1/fl1-1.jpeg" alt="Falcon 1">
+            <img id="slide-2" src="../assets/fl1/fl1-2.jpg" alt="Falcon 1">
+            <img id="slide-3" src="../assets/fl1/fl1-3.jpg" alt="Falcon 1">
+        </div>
+        <div class="slider-nav">
+            <a href="#slide-1"></a>
+            <a href="#slide-2"></a>
+            <a href="#slide-3"></a> 
+        </div>
+    </div>        
+
+    <div class="rockets-information">
+        <span style="color: red; letter-spacing: 2px;">Falcon 1</span> ist die erste Trägerrakete, die von SpaceX produziert wurde. Ihr Erstflug fand am 24. März 2006 statt. Die Rakete hatte eine Nutzlastkapazität von etwa 670 Kilogramm für den erdnahen Orbit (LEO) und wurde von dem Merlin 1C-Triebwerk angetrieben, wobei sie eine orbitale Geschwindigkeit von etwa 28.000 km/h erreichte. Leider endeten die ersten drei Starts erfolglos. Aufgrund dessen erreichte Falcon 1 jedoch am 28. September 2008 erfolgreich den Orbit und wurde damit die erste private Rakete, die diese Leistung erbrachte.
+
+        <button id="learnMoreBtn3" onclick="appearFl9Page()" style="font-size: 30px;"><i class="ri-skip-down-line"></i></button>
+    </div>
+
+</section>
+
+<section id="rockets-fl9">
+
+    <div class="rockets-fl9-container">
+        <div class="slider-wrapper">
+            <div class="slider">
+                <img id="slide-4" src="../assets/fl9/fl9-1.jpg" alt="Falcon 9">
+                <img id="slide-5" src="../assets/fl9/fl9-2.jpg" alt="Falcon 9">
+                <img id="slide-6" src="../assets/fl9/fl9-3.jpg" alt="Falcon 9">
+            </div>
+            <div class="slider-nav">
+                <a href="#slide-4"></a>
+                <a href="#slide-5"></a>
+                <a href="#slide-6"></a> 
+            </div>
+        </div>  
+    </div>   
+    
+    <div class="rockets-information">
+        <span style="color: red; letter-spacing: 2px;">Falcon 9</span> ist eine wiederverwendbare Trägerrakete, die von SpaceX entwickelt wurde. Ihr Erstflug fand am 4. Juni 2010 statt. Die Rakete ist darauf ausgelegt, Nutzlasten in den erdnahen Orbit (LEO) und den geostationären Transferorbit (GTO) zu befördern. Falcon 9 ist mit neun Merlin 1D-Triebwerken ausgestattet und kann Nutzlasten von bis zu 22.800 Kilogramm für LEO transportieren. Dank der wiederverwendbaren Technologie kann jedoch die erste Stufe der Falcon 9 zur Erde zurückkehren und auf See- oder landgestützten Plattformen landen, was die Kosten für den Zugang zum Weltraum erheblich reduziert.
+
+        <button id="learnMoreBtn3" onclick="appearFlhPage()" style="font-size: 30px;"><i class="ri-skip-down-line"></i></button>
+    </div>
+
+</section>
+
+<section id="rockets-flH">
+
+    <div class="rockets-flH-container">
+        <div class="rockets-fl9-container">
+            <div class="slider-wrapper">
+                <div class="slider">
+                    <img id="slide-7" src="../assets/flh/flh-1.jpeg" alt="Falcon Heavy">
+                    <img id="slide-8" src="../assets/flh/flh-2.jpg" alt="Falcon Heavy">
+                    <img id="slide-9" src="../assets/flh/flh-3.jpg" alt="Falcon Heavy">
+                </div>
+                <div class="slider-nav">
+                    <a href="#slide-7"></a>
+                    <a href="#slide-8"></a>
+                    <a href="#slide-9"></a> 
+                </div>
+            </div>  
+        </div> 
+    </div>    
+    <div class="rockets-information">
+        <span style="color: red; letter-spacing: 2px;">Falcon Heavy</span> ist eine der leistungsstärksten Trägerraketen der Welt, ebenfalls entwickelt von SpaceX. Ihr erster erfolgreicher Flug fand am 6. Februar 2018 statt. Falcon Heavy besteht aus drei integrierten Falcon 9-Raketen und bildet ein beeindruckendes Raumtransportsystem. Die Rakete kann massive Nutzlasten in verschiedene Umlaufbahnen befördern, mit einer Nutzlastkapazität von bis zu 64 Tonnen für den erdnahen Orbit (LEO) und 16,8 Tonnen für den geostationären Transferorbit (GTO). Ähnlich wie Falcon 9 sind die Hauptstufen der Falcon Heavy auf Wiederverwendbarkeit ausgelegt, was die Effizienz und Wettbewerbsfähigkeit der Rakete auf dem Raumfahrtmarkt weiter erhöht.
+
+        <button id="learnMoreBtn3" onclick="appearStarshipPage()" style="font-size: 30px;"><i class="ri-skip-down-line"></i></button>
+    </div>
+
+</section>
+
+<section id="rockets-StarShip">
+
+    <div class="rockets-StarShip-container">
+        <div class="rockets-flH-container">
+            <div class="rockets-fl9-container">
+                <div class="slider-wrapper">
+                    <div class="slider">
+                        <img id="slide-10" src="../assets/starShip/starShip-1.jpeg" alt="Starship">
+                        <img id="slide-11" src="../assets/starShip/starShip-2.jpg" alt="Starship">
+                        <img id="slide-12" src="../assets/starShip/starShip-3.jpg" alt="Starship">
+                    </div>
+                    <div class="slider-nav">
+                        <a href="#slide-10"></a>
+                        <a href="#slide-11"></a>
+                        <a href="#slide-12"></a> 
+                    </div>
+                </div>  
+            </div> 
+        </div>   
+    </div>    
+    <div class="rockets-information">        
+        <span style="color: red; letter-spacing: 2px;">STARSHIP</span>, die neueste Innovation von SpaceX, ist eine umfassende Mehrzweckrakete mit Super Heavy als ihrer leistungsstarken ersten Stufe und einem fortschrittlichen Raumschiff. Entwickelt für die Wiederverwendbarkeit, hat die Rakete die Fähigkeit, Nutzlasten von bis zu 100 Tonnen in den erdnahen Orbit (LEO) zu befördern, was sie zu einem potenziell entscheidenden Transportmittel für zukünftige Erkundungsmissionen macht. Sie integriert die neuesten Technologien, wie Raptor-Triebwerke und innovative Verbundwerkstoffe, um fortschrittliche Ziele in der Raumfahrterkundung zu erreichen.
+
+        <button id="learnMoreBtn3" onclick="appearTechUse()" style="font-size: 25px;"><i class="ri-skip-down-line"></i></button>
+    </div>
+
+</section>
+
+<section id="Technology-usage">
+
+    <video autoplay muted loop controlsList="nodownload nofullscreen" disablepictureinpicture id="myVideo2">
+        <source src="../assets/landing.mp4" type="video/mp4">
+    </video>
+
+    <div id="returnVideo" class="Technology-usage-container">
+        <div id="techUse1" class="tech-use-tile-left">
+            <h1>First Stage Recovery</h1>    
+            <p>
+                The reusable technology in SpaceX rockets begins with the precise recovery of the first stages of the rockets after they detach from the rest of the carrier. Advanced navigation and control systems enable controlled descent and precise landing of the first stages on special sea or land-based platforms. This process not only reduces the costs of space missions but also marks a significant step towards a sustainable approach to space exploration.
+            </p>
+
+        </div>
+        <div id="techUse2" class="tech-use-tile-left">
+            <h1>Recovery Process for Reuse</h1>    
+            <p>
+                After a successful landing, the first stages undergo a meticulous process of refurbishment. Specialized teams of engineers conduct detailed analyses and technical inspections, examining each element for performance and durability. SpaceX rocket manufacturers utilize modern technologies, such as 3D printing, to repair, enhance, and tailor the recovered components for subsequent space missions.
+            </p>
+            
+        </div>
+        <div id="techUse3" class="tech-use-tile-left">
+            <h1>Impact on Cost and Durability</h1>
+            <p>
+                Reusable technology has a tremendous impact on the costs of space missions and the durability of rocket infrastructure. Through the repeated utilization of first stages, SpaceX achieves a significant reduction in costs, making space exploration more accessible. Additionally, this sustainable practice also reduces environmental impact by eliminating the need to produce new rockets for each mission. SpaceX's reusable technology is a step towards a more efficient and sustainable future for space travel.
+            </p>
+
+        </div>
+        <button id="hideTiles" class="temp-tiles" onclick="hidetiles()">Kacheln ausblenden</button>
+        <button id="showTiles" onclick="showtiles()">Kacheln anzeigen</button>
+        <button id="nextOne" class="temp-butt" onclick="appearProduction()"><i class="ri-skip-down-line"></i></button>
+    </div>    
+
+</section>
+
+<section id="production-process">
+    <div class="kontener">
+        <h1 class="production-ha1">PRODUKTIONSPROZESS</h1>
+        <div class="production-box-container">
+            <div class="production-box">
+                <h1>Fortschrittliche Produktionstechnologien</h1>
+                <p>Die Raketenproduktion in den SpaceX-Einrichtungen basiert auf fortschrittlichen Technologien. Automatisierte Montagesysteme und Roboter sind integraler Bestandteil, um die Produktionszeit zu verkürzen und die Effizienz zu steigern. Dieser Ansatz ermöglicht die schnelle Erstellung komplexer Komponenten bei gleichzeitiger Einhaltung höchster Qualitätsstandards.</p>
+            </div>
+            
+            <div class="production-box">
+                <h1>Innovationen in Materialien und Strukturen</h1>
+                <p>Die Ingenieure von SpaceX investieren kontinuierlich in die Verbesserung von Verbundmaterialien und Raketenstrukturen. Moderne Materialien, die den Bedingungen im Weltraum standhalten, interagieren mit innovativen Strukturen und gewährleisten leichte und langlebige Lösungen. Dieser fortschrittliche Ansatz erhöht die Effizienz von Raketenkonstruktionen.</p>
+            </div>
+            
+            <div class="production-box">
+                <h1>3D-Druck im Produktionsprozess</h1>
+                <p>3D-Druck ist eine Schlüsseltechnologie in der Raketenproduktion von SpaceX. Die Flexibilität und Geschwindigkeit dieses Prozesses ermöglichen die Erstellung komplexer Komponenten, die den spezifischen Anforderungen der Raumfahrt entsprechen. Der 3D-Druck im Produktionsprozess führt auch einen innovativen Ansatz zur Gestaltung von Raketenstrukturen ein.</p>
+            </div>
+            
+            <div class="production-box">
+                <h1>Prazise Qualitätskontrolle</h1>
+                <p>Jede Phase der Raketenproduktion unterliegt strengen Standards präziser Qualitätskontrolle. Spezialisierte Ingenieurteams gewährleisten die höchste Qualität für jedes Element, das für die Sicherheit und Effektivität von Raketen entscheidend ist. Präzise Qualitätskontrolle ist integraler Bestandteil des Prozesses und beseitigt potenzielle Probleme vor Raumfahrtmissionen.</p>
+            </div>
+            
+            <div class="production-box">
+                <h1>Rückgewinnung und Aufbereitung zur Wiederverwendung</h1>
+                <p>Nach erfolgreichen Missionen werden die ersten Stufen der Raketen präzise zurückgewonnen und durchlaufen einen Aufbereitungsprozess für die Wiederverwendung. Komplexe technische Inspektionen und innovative Technologien wie 3D-Druck unterstützen diesen Prozess. Dieser nachhaltige Produktionsansatz steht im Einklang mit der langfristigen Strategie von SpaceX.</p>
+            </div>
+            
+            
+            <button id="learnMoreBtn4" onclick="appearAdapt()" style="font-size: 30px;"><i class="ri-skip-down-line"></i></button>
+        </div>
+    </div>
+        
+    
+</section>
+
+<section id="adapt">
+
+    <div class="adapt-container">
+        <div class="adapt-kontener">
+            <h1 class="adapt-ha1">ANWENDUNGEN VON RAKETEN</h1>
+            <div class="adapt-box-container">
+                <div class="adapt-box">
+                    <h1>SpaceX Space Revolution</h1>
+                    <p>
+                        SpaceX-Raketen haben vielfältige Anwendungen im Bereich der Raumfahrterkundung. Primär spielen sie eine entscheidende Rolle bei der Bereitstellung von Satelliten in verschiedene Umlaufbahnen, was Kommunikation, Erdbeobachtung und wissenschaftliche Forschung ermöglicht. Diese Raketen sind auch wesentlich für die Versorgung der Internationalen Raumstation (ISS), indem sie Astronauten mit bemannten Missionen, Ausrüstung und wissenschaftlichen Materialien versorgen.
+
+                        Im Kontext bemannter Raummissionen führt die Crew-Dragon-Rakete von SpaceX eine neue Ära des Astronautentransports ein, der die sichere Beförderung von Menschen in den Orbit ermöglicht. Dies ist entscheidend für zukünftige Raumfahrtmissionen und die Erforschung des Weltraums. Darüber hinaus beinhalten die Zukunftspläne ehrgeizige Vorhaben zur Kolonisierung des Mars, bei denen die Starship-Rakete das Potenzial hat, Menschen und Fracht zum Roten Planeten zu transportieren. Dies eröffnet die Möglichkeit, langfristig das Ziel zu erreichen, Menschen jenseits der Grenzen der Erde anzusiedeln. Auf diese Weise werden SpaceX-Raketen zu einem entscheidenden Werkzeug bei der Ausdehnung der Grenzen menschlicher Präsenz im Weltraum.
+                    </p>
+
+                
+            </div>
+            <button id="learnMoreBtn5" onclick="appearMissionPlans()" style="font-size: 30px;"><i class="ri-skip-down-line"></i></button>
+        </div>
+    </div>    
+
+</section>
+
+<section id="mission-plans">
+
+    <div class="mission--kontener">
+        <h1 class="mission--ha1">GEPLANTE MISSIONEN</h1>
+<div class="mission--box-container">
+    <div class="mission--box">
+        <h1>Crew Dragon-Missionen zur ISS</h1>
+        <p>Fortsetzung bemannter Flüge zur Internationalen Raumstation (ISS) unter Verwendung des Crew Dragon-Raumschiffs. Diese Missionen sind entscheidend für die Aufrechterhaltung der Kontinuität der ISS-Versorgung und die Entwicklung von Fähigkeiten für bemannte Raumfahrt.</p>
+    </div>
+
+    <div class="mission--box">
+        <h1>Starship-Missionen zum Mars</h1>
+        <p>Ambitionierte Pläne für die Kolonisierung des Mars beinhalten die Entsendung von Versorgungs-, Erkundungs- und letztendlich bemannten Missionen zum Roten Planeten unter Verwendung der Starship-Rakete. SpaceX strebt an, eine neue Ära der Mars-Exploration einzuleiten.</p>
+    </div>
+
+    <div class="mission--box">
+        <h1>Starlink-Programm</h1>
+        <p>Fortsetzung der Erweiterung der Starlink-Satellitenflotte im Rahmen des Internetprogramms. SpaceX plant, zusätzliche Satellitenkonstellationen einzuführen, um weltweit Breitband-Internetzugang bereitzustellen.</p>
+    </div>
+
+    <div class="mission--box">
+        <h1>Falcon 9-Transportmissionen</h1>
+        <p>Geplante und regelmäßige Flüge von Falcon 9-Raketen mit verschiedenen Nutzlasten, einschließlich kommerzieller Satelliten, Forschungsmissionen und Versorgungsmissionen.</p>
+    </div>
+
+    <div class="mission--box">
+        <h1>Erkundung des Mondes</h1>
+        <p>Im Rahmen des Artemis-Programms der NASA ist SpaceX Partner bei der Durchführung von Versorgungs- und bemannten Missionen zum Mond. Zukünftige bemannte Artemis-Missionen unter Verwendung des Starship-Raumschiffs sind ebenfalls geplant.</p>
+    </div>
+
+</div>
+
+    </div>   
+
+</section>
+
+<section id="gallery">
+
+    <div class="gallery-container">
+        <div class="mission-gallery-container">
+            <img src="https://blogs.nasa.gov/commercialcrew/wp-content/uploads/sites/230/2020/08/Crew-1_CEITpt2-20200612-DSC05519_2_.jpg" alt="">
+            <img src="https://www.spacex.com/static/images/locations/kennedy.jpg" alt="">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/ORBCOMM-2_%2823282658734%29.jpg" alt="">
+            <img src="https://images.theconversation.com/files/10787/original/54954sbn-1337307547.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip" alt="">
+            <img src="https://www.americaspace.com/wp-content/uploads/2023/09/spacex.jpg" alt="">
+            <img src="https://www.asdnews.com/NewsImages/b/74847/78436_O.jpg" alt="">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Starlink_Mission_%2847926144123%29.jpg" alt="">
+            <img src="https://s.france24.com/media/display/86f0c1da-1683-11ec-a10d-005056a90284/w:980/p:16x9/2021-09-16T000802Z_1015205370_HP1EH9G00DA03_RTRMADP_3_SPACE-EXPLORATION-SPACEX.JPG" alt="">
+            <img src="https://scx2.b-cdn.net/gfx/news/2018/spacexwillus.jpg" alt="">
+            <img src="https://images-assets.nasa.gov/image/jsc2023e037683/jsc2023e037683~medium.jpg" alt="">
+            <img src="https://media.cnn.com/api/v1/images/stellar/prod/200731161100-02-spacex-mission.jpg?q=w_2976,h_2224,x_0,y_0,c_fill" alt="">
+            <img src="https://hips.hearstapps.com/hmg-prod/images/27449863849-709e135a98-o-1517341241.jpg" alt="">
+            <img src="https://images.interestingengineering.com/1200x675/filters:format(webp)/2023/01/17/image/jpeg/hstIa6uTAe6W2pHqjLULfHHJLaS7Gfpjygja859Q.jpg" alt="">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPgMe6ND6rqlIdMJsu2GTzqYAc6hwL4XhgVA&usqp=CAU" alt="">
+            <img src="https://www.dispatch.com/gcdn/authoring/2020/05/27/NCOD/ghows-OH-bb9fe111-9239-46bd-b784-5f68e1c2654a-d7be983f.jpeg?width=660&height=440&fit=crop&format=pjpg&auto=webp" alt="">
+            <img src="https://www.teslarati.com/wp-content/uploads/2020/12/Starship-2019-Mars-reentry-render-SpaceX-1-crop-3-c.jpg" alt="">
+            <img src="https://www.cnet.com/a/img/resize/59aff026a606fa767082eb01bc8af2f2ad99484c/hub/2018/02/08/3dcc95d9-a305-407d-9a7a-5aa80802cf45/screen-shot-2018-02-08-at-12-07-40-pm-1-1.jpg?auto=webp&fit=crop&height=675&width=1200" alt="">
+        </div>  
+    </div>    
+
+</section>
+
+<script src="../js/scriptDE.js"></script>
+</body>
+</html>

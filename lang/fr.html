@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/rwd.css">
+    <title>SpaceXwiki</title>
+</head>
+<body onload="Loader()">
+
+<header class="header" id="heed">
+    <nav class="nav container">
+        <div class="nav__data">
+            <a href="#" onclick="appearHomePage()" class="nav__logo">
+                SpaceX<span id="logoSpan">WIKI</span>
+            </a>
+            
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line nav__burger"></i>
+                <i class="ri-close-line nav__close"></i>
+            </div>
+        </div>
+
+        <!--=============== NAV MENU ===============-->
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+                <li><a href="#" onclick="appearHomePage()" class="nav__link">Accueil</a></li>
+
+                <li><a href="#" onclick="appearHistory()" class="nav__link">Histoire</a></li>
+                <li><a href="#" onclick="appearTechnologyPage()" class="nav__link">Technologie</a></li>
+
+                <!--=============== DROPDOWN 1 ===============-->
+                <li class="dropdown__item">
+                <div class="nav__link">
+                    Fusées <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                </div>
+
+                <ul class="dropdown__menu">
+                    <li>
+                        <a href="#" onclick="appearFl1Page()" class="dropdown__link">
+                            <i class="ri-rocket-line"></i> Falcon 1
+                        </a>                          
+                    </li>
+
+                    <li>
+                        <a href="#" onclick="appearFl9Page()" class="dropdown__link">
+                            <i class="ri-rocket-line"></i> Falcon9
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#" onclick="appearFlhPage()" class="dropdown__link">
+                            <i class="ri-rocket-line"></i> Falcon Heavy
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#" onclick="appearStarshipPage()" class="dropdown__link">
+                            <i class="ri-rocket-line"></i> Starship
+                        </a>
+                    </li>
+
+                    <!--=============== DROPDOWN SUBMENU ===============-->
+                    <li class="dropdown__subitem">
+                        <div class="dropdown__link">
+                            <i class="ri-more-line"></i> Plus <i class="ri-add-line dropdown__add"></i>
+                        </div>
+
+                        <ul class="dropdown__submenu">
+                            <li>
+                            <a href="#" onclick="appearTechUse()" class="dropdown__sublink">
+                                <i class="ri-skip-right-fill"></i> Technologie réutilisable
+                            </a>
+                            </li>
+    
+                            <li>
+                            <a href="#" onclick="appearProduction()" class="dropdown__sublink">
+                                <i class="ri-skip-right-fill"></i> Processus de production
+                            </a>
+                            </li>
+    
+                            <li>
+                            <a href="#" onclick="appearAdapt()" class="dropdown__sublink">
+                                <i class="ri-skip-right-fill"></i> Applications des fusées
+                            </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                </li>
+
+                <!--=============== DROPDOWN 2 ===============-->
+                <li class="dropdown__item">
+                <div class="nav__link">
+                    Missions spatiales <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                </div>
+
+                <ul class="dropdown__menu">
+
+                    <li>
+                        <a href="#" onclick="appearMissionPlans()" class="dropdown__link">
+                            <i class="ri-focus-3-line"></i> Missions planifiées
+                        </a>
+                    </li>
+                </ul>
+                </li>
+
+                <li><a href="#" onclick="appearMissionGallery()" class="nav__link">Galerie</a></li>
+
+                <li class="dropdown__item">
+                    <div class="nav__link">
+                        <i class="ri-earth-line"></i>Langue <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                    </div>
+    
+                    <ul class="dropdown__menu">
+                        <li>
+                            <a href="../index.html" class="dropdown__link">
+                                <i class="ri-global-line"></i> POLONAIS
+                            </a>                          
+                        </li>
+    
+                        <li>
+                            <a href="eng.html" class="dropdown__link">
+                                <i class="ri-global-line"></i> ANGLAIS
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="de.html" class="dropdown__link">
+                                <i class="ri-global-line"></i> ALLEMAND
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="span.html" class="dropdown__link">
+                                <i class="ri-global-line"></i> ESPAGNOL
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="dropdown__link">
+                                <i class="ri-global-line"></i> FRANÇAIS
+                            </a>
+                        </li>
+                    </ul>
+                    </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<section id="loader">
+</section>
+
+<section id="homepage">
+
+    <video autoplay muted loop controlsList="nodownload nofullscreen" disablepictureinpicture id="myVideo">
+        <source src="../assets/SpaceX2.mp4" type="video/mp4">
+    </video>
+
+    <div id="homePage_container">
+        <div class="tileText">
+            <h1>Bienvenue sur SpaceX<span id="logoSpan">Wiki</span></h1>
+<div class="tileText-inside">                
+    <p>Votre source d'informations sur les technologies spatiales pionnières, les missions d'exploration et les visions de l'avenir de l'exploration spatiale. N'hésitez pas à plonger dans le monde fascinant des réalisations cosmiques !</p>
+</div>            
+<button id="learnMoreBtn" onclick="appearHistory()">En savoir plus !</button>
+
+        </div>
+    </div>
+</section>
+
+<section id="history">
+
+    <div class="history-container">
+        <div class="history-tile-image"></div>
+        <div class="history-tile-text">
+            <h1>Histoire de SpaceX</h1>
+<p>SpaceX, officiellement connue sous le nom de Space Exploration Technologies Corp., a été fondée par Elon Musk en 2002 dans le but de réduire les coûts d'accès à l'espace et de permettre la colonisation de Mars. En 2008, la société a réalisé une percée en lançant le premier satellite privé en orbite à l'aide de la fusée <span onclick="appearFl1Page()" style="color: red; cursor: pointer;">Falcon 1</span>. Les années suivantes ont apporté des succès, notamment le développement des fusées réutilisables <span onclick="appearFl9Page()" style="color: red; cursor: pointer;">Falcon 9</span> et des vaisseaux spatiaux habités tels que Dragon Crew. SpaceX est devenue un partenaire clé de la NASA, fournissant la Station spatiale internationale et pionnier dans le domaine de la technologie des fusées.</p>
+
+<button id="learnMoreBtn2" onclick="appearTechnologyPage()" style="font-size: 18px;">Technologie</button>
+
+        </div>
+    </div>
+    
+</section>
+
+<section id="technology">
+
+    <h1>TECHNOLOGIE</h1>
+    <div class="technology-container">
+        <div class="technology-tile-list">
+            <p>Choisissez des technologies</p>
+            <ol>
+                <li><a href="#" onclick="techLi1()">Système d'atterrissage de la première étape</a></li>
+                <li><a href="#" onclick="techLi2()">Fusées à carburant liquide</a></li>
+                <li><a href="#" onclick="techLi3()">Système de navigation autonome</a></li>
+                <li><a href="#" onclick="techLi4()">Intégration avec la technologie de l'information</a></li>
+                <li><a href="#" onclick="techLi5()">Communication par satellite</a></li>
+            </ol>
+            <button id="learnMoreBtn2" onclick="appearFl1Page()" style="font-size: 18px;">Fusées</button>
+
+        </div>
+        <div class="technology-tile-text" id="techTextField">
+            Le système d'atterrissage de la première étape des fusées SpaceX est une technologie révolutionnaire qui permet à la fusée d'être réutilisée plusieurs fois. Après s'être séparée du reste du lanceur, la première étape retourne sur Terre, effectuant des manœuvres d'atterrissage précises sur une plateforme maritime ou terrestre. Ce processus innovant réduit significativement les coûts des missions spatiales, constituant un élément clé de la stratégie de SpaceX pour l'exploration spatiale durable. Grâce à cette approche, la société atteint une efficacité qui était auparavant hors de portée dans les systèmes de fusées traditionnels.
+        </div>
+        <button id="learnMoreBtn2" class="temporary2" onclick="removeCounter()" style="font-size: 16px;"><i class="ri-arrow-left-line"></i></button>
+        <button id="learnMoreBtn2" class="temporary3" onclick="addCounter()" style="font-size: 16px;"><i class="ri-arrow-right-line"></i></button>
+        <button id="learnMoreBtn2" class="temporary" onclick="appearFl1Page()" style="font-size: 14px;">Fusées</button>
+    </div>   
+
+</section>
+
+<section id="rockets-fl1">
+    <div class="slider-wrapper">
+        <div class="slider">
+            <img id="slide-1" src="../assets/fl1/fl1-1.jpeg" alt="Falcon 1">
+            <img id="slide-2" src="../assets/fl1/fl1-2.jpg" alt="Falcon 1">
+            <img id="slide-3" src="../assets/fl1/fl1-3.jpg" alt="Falcon 1">
+        </div>
+        <div class="slider-nav">
+            <a href="#slide-1"></a>
+            <a href="#slide-2"></a>
+            <a href="#slide-3"></a> 
+        </div>
+    </div>        
+
+    <div class="rockets-information">
+        <span style="color: red; letter-spacing: 2px;">Falcon 1</span> est le premier véhicule de lancement produit par SpaceX. Son vol inaugural a eu lieu le 24 mars 2006. La fusée avait une capacité de charge utile d'environ 670 kilogrammes en orbite basse (LEO) et était propulsée par le moteur Merlin 1C, atteignant une vitesse orbitale d'environ 28 000 km/h. Malheureusement, les trois premiers lancements se sont soldés par des échecs. Cependant, le 28 septembre 2008, Falcon 1 a réussi à atteindre l'orbite, devenant la première fusée privée à accomplir cet exploit.
+
+        <button id="learnMoreBtn3" onclick="appearFl9Page()" style="font-size: 30px;"><i class="ri-skip-down-line"></i></button>
+    </div>
+
+</section>
+
+<section id="rockets-fl9">
+
+    <div class="rockets-fl9-container">
+        <div class="slider-wrapper">
+            <div class="slider">
+                <img id="slide-4" src="../assets/fl9/fl9-1.jpg" alt="Falcon 9">
+                <img id="slide-5" src="../assets/fl9/fl9-2.jpg" alt="Falcon 9">
+                <img id="slide-6" src="../assets/fl9/fl9-3.jpg" alt="Falcon 9">
+            </div>
+            <div class="slider-nav">
+                <a href="#slide-4"></a>
+                <a href="#slide-5"></a>
+                <a href="#slide-6"></a> 
+            </div>
+        </div>  
+    </div>   
+    
+    <div class="rockets-information">
+        <span style="color: red; letter-spacing: 2px;">Falcon 9</span> est un véhicule de lancement réutilisable développé par SpaceX. Son vol inaugural a eu lieu le 4 juin 2010. La fusée est conçue pour transporter des charges utiles en orbite basse (LEO) et en orbite de transfert géostationnaire (GTO). Falcon 9 est équipée de neuf moteurs Merlin 1D et peut transporter des charges utiles pesant jusqu'à 22 800 kilogrammes en LEO. Cependant, grâce à la technologie réutilisable, le premier étage de Falcon 9 peut revenir sur Terre, atterrissant sur des plates-formes en mer ou sur terre, réduisant ainsi considérablement les coûts d'accès à l'espace.
+
+        <button id="learnMoreBtn3" onclick="appearFlhPage()" style="font-size: 30px;"><i class="ri-skip-down-line"></i></button>
+    </div>
+
+</section>
+
+<section id="rockets-flH">
+
+    <div class="rockets-flH-container">
+        <div class="rockets-fl9-container">
+            <div class="slider-wrapper">
+                <div class="slider">
+                    <img id="slide-7" src="../assets/flh/flh-1.jpeg" alt="Falcon Heavy">
+                    <img id="slide-8" src="../assets/flh/flh-2.jpg" alt="Falcon Heavy">
+                    <img id="slide-9" src="../assets/flh/flh-3.jpg" alt="Falcon Heavy">
+                </div>
+                <div class="slider-nav">
+                    <a href="#slide-7"></a>
+                    <a href="#slide-8"></a>
+                    <a href="#slide-9"></a> 
+                </div>
+            </div>  
+        </div> 
+    </div>    
+    <div class="rockets-information">
+        <span style="color: red; letter-spacing: 2px;">Falcon Heavy</span> est l'un des véhicules de lancement les plus puissants au monde, également développé par SpaceX. Son premier vol réussi a eu lieu le 6 février 2018. Falcon Heavy est constituée de trois fusées Falcon 9 intégrées, en faisant un redoutable système de transport spatial. La fusée peut transporter des charges utiles massives vers diverses orbites, avec une capacité de charge utile allant jusqu'à 64 tonnes en orbite basse (LEO) et 16,8 tonnes en orbite de transfert géostationnaire (GTO). Tout comme Falcon 9, les étages principaux de Falcon Heavy sont conçus pour être réutilisables, améliorant encore l'efficacité et la compétitivité de la fusée sur le marché spatial.
+
+        <button id="learnMoreBtn3" onclick="appearStarshipPage()" style="font-size: 30px;"><i class="ri-skip-down-line"></i></button>
+    </div>
+
+</section>
+
+<section id="rockets-StarShip">
+
+    <div class="rockets-StarShip-container">
+        <div class="rockets-flH-container">
+            <div class="rockets-fl9-container">
+                <div class="slider-wrapper">
+                    <div class="slider">
+                        <img id="slide-10" src="../assets/starShip/starShip-1.jpeg" alt="Starship">
+                        <img id="slide-11" src="../assets/starShip/starShip-2.jpg" alt="Starship">
+                        <img id="slide-12" src="../assets/starShip/starShip-3.jpg" alt="Starship">
+                    </div>
+                    <div class="slider-nav">
+                        <a href="#slide-10"></a>
+                        <a href="#slide-11"></a>
+                        <a href="#slide-12"></a> 
+                    </div>
+                </div>  
+            </div> 
+        </div>   
+    </div>    
+    <div class="rockets-information">        
+        <span style="color: red; letter-spacing: 2px;">STARSHIP</span>, la dernière innovation de SpaceX, est une fusée polyvalente complète avec Super Heavy comme son puissant premier étage et un vaisseau spatial avancé. Conçue pour la réutilisation, la fusée a la capacité de transporter des charges utiles pesant jusqu'à 100 tonnes en orbite basse (LEO), en faisant un moyen de transport potentiellement crucial pour les futures missions d'exploration. Elle intègre les dernières technologies, telles que les moteurs Raptor et des matériaux composites innovants, pour atteindre des objectifs avancés dans le domaine de l'exploration spatiale.
+
+        <button id="learnMoreBtn3" onclick="appearTechUse()" style="font-size: 25px;"><i class="ri-skip-down-line"></i></button>
+    </div>
+
+</section>
+
+<section id="Technology-usage">
+
+    <video autoplay muted loop controlsList="nodownload nofullscreen" disablepictureinpicture id="myVideo2">
+        <source src="../assets/landing.mp4" type="video/mp4">
+    </video>
+
+    <div id="returnVideo" class="Technology-usage-container">
+        <div id="techUse1" class="tech-use-tile-left">
+            <h1>Récupération de la première étape</h1>    
+            <p>
+                La technologie réutilisable des fusées SpaceX commence par la récupération précise des premiers étages des fusées après leur séparation du reste du lanceur. Des systèmes de navigation et de contrôle avancés permettent une descente contrôlée et un atterrissage précis des premiers étages sur des plates-formes spéciales en mer ou sur terre. Ce processus réduit non seulement les coûts des missions spatiales, mais marque également une étape significative vers une approche durable de l'exploration spatiale.
+            </p>
+        </div>
+        
+        <div id="techUse2" class="tech-use-tile-left">
+            <h1>Processus de récupération pour la réutilisation</h1>    
+            <p>
+                Après un atterrissage réussi, les premiers étages subissent un processus méticuleux de remise à neuf. Des équipes spécialisées d'ingénieurs réalisent des analyses détaillées et des inspections techniques, examinant chaque élément pour ses performances et sa durabilité. Les fabricants de fusées SpaceX utilisent des technologies modernes, telles que l'impression 3D, pour réparer, améliorer et adapter les composants récupérés pour les missions spatiales ultérieures.
+            </p>
+        </div>
+        
+        <div id="techUse3" class="tech-use-tile-left">
+            <h1>Impact sur le coût et la durabilité</h1>
+            <p>
+                La technologie réutilisable a un impact énorme sur les coûts des missions spatiales et la durabilité de l'infrastructure des fusées. Grâce à l'utilisation répétée des premiers étages, SpaceX réalise une réduction significative des coûts, rendant l'exploration spatiale plus accessible. De plus, cette pratique durable réduit également l'impact environnemental en éliminant le besoin de produire de nouvelles fusées pour chaque mission. La technologie réutilisable de SpaceX est un pas vers un avenir plus efficace et durable pour les voyages spatiaux.
+            </p>
+        </div>
+        
+        <button id="hideTiles" class="temp-tiles" onclick="hidetiles()">Masquer les tuiles</button>
+        <button id="showTiles" onclick="showtiles()">Afficher les tuiles</button>
+        <button id="nextOne" class="temp-butt" onclick="appearProduction()"><i class="ri-skip-down-line"></i></button>
+    </div>    
+
+</section>
+
+<section id="production-process">
+    <div class="kontener">
+        <h1 class="production-ha1">PROCESSUS DE PRODUCTION</h1>
+<div class="production-box-container">
+    <div class="production-box">
+        <h1>Technologies de Production Avancées</h1>
+        <p>La production de fusées dans les installations SpaceX est un processus basé sur des technologies avancées. Des systèmes d'assemblage automatisés et des robots sont essentiels, réduisant le temps de production et améliorant l'efficacité. Cette approche permet la création rapide de composants complexes tout en maintenant les normes de qualité les plus élevées.</p>
+    </div>
+
+    <div class="production-box">
+        <h1>Innovations dans les Matériaux et les Structures</h1>
+        <p>Les ingénieurs de SpaceX investissent dans l'amélioration continue des matériaux composites et des structures de fusées. Des matériaux modernes résistants aux conditions spatiales interagissent avec des structures innovantes, assurant des solutions légères et durables. Cette approche avancée augmente l'efficacité des constructions de fusées.</p>
+    </div>
+
+    <div class="production-box">
+        <h1>Impression 3D dans le Processus de Production</h1>
+        <p>L'impression 3D est une technologie clé dans la production de fusées chez SpaceX. La flexibilité et la rapidité de ce processus permettent la création de composants complexes adaptés aux exigences spécifiques des voyages spatiaux. L'impression 3D dans le processus de production introduit également une approche innovante pour façonner les structures de fusées.</p>
+    </div>
+
+    <div class="production-box">
+        <h1>Contrôle Qualité Précis</h1>
+        <p>Chaque étape de la production de fusées fait l'objet de normes rigoureuses de contrôle qualité précis. Des équipes spécialisées d'ingénieurs garantissent la plus haute qualité pour chaque élément, crucial pour la sécurité et l'efficacité des fusées. Le contrôle qualité précis est une partie intégrante du processus, éliminant les problèmes potentiels avant les missions spatiales.</p>
+    </div>
+
+    <div class="production-box">
+        <h1>Récupération et Remise à Neuf pour la Réutilisation</h1>
+        <p>Après des missions réussies, les premiers étages des fusées sont récupérés de manière précise et subissent un processus de remise à neuf en vue de la réutilisation. Des inspections techniques complexes et des technologies innovantes, telles que l'impression 3D, soutiennent ce processus. Cette approche de production durable s'aligne avec la stratégie à long terme de SpaceX.</p>
+    </div>
+
+    <button id="learnMoreBtn4" onclick="appearAdapt()" style="font-size: 30px;"><i class="ri-skip-down-line"></i></button>
+</div>
+
+    </div>
+        
+    
+</section>
+
+<section id="adapt">
+
+    <div class="adapt-container">
+        <div class="adapt-kontener">
+            <h1 class="adapt-ha1">APPLICATIONS DES FUSÉES</h1>
+<div class="adapt-box-container">
+    <div class="adapt-box">
+        <h1>Révolution Spatiale de SpaceX</h1>
+        <p>
+            Les fusées SpaceX ont de larges applications dans le domaine de l'exploration spatiale. Principalement, elles jouent un rôle crucial dans la livraison de satellites à diverses orbites, permettant la communication, l'observation de la Terre et la recherche scientifique. Ces fusées sont également essentielles pour approvisionner la Station spatiale internationale (ISS), fournissant des missions habitées, de l'équipement et des matériaux scientifiques aux astronautes.
+
+            Dans le contexte des missions spatiales habitées, la fusée Crew Dragon de SpaceX introduit une nouvelle ère dans le transport des astronautes, permettant le déplacement sécurisé de personnes en orbite, ce qui est vital pour les futures missions spatiales et l'exploration spatiale. De plus, les plans ambitieux pour la colonisation de Mars incluent la fusée Starship, qui a le potentiel de transporter des personnes et du matériel vers la Planète Rouge, ouvrant la voie à l'objectif à long terme d'établir des colonies humaines au-delà des frontières de la Terre. Ainsi, les fusées SpaceX deviennent un outil clé dans la poursuite de l'expansion des limites de la présence humaine dans l'espace.
+        </p>
+    </div>
+</div>
+
+            <button id="learnMoreBtn5" onclick="appearMissionPlans()" style="font-size: 30px;"><i class="ri-skip-down-line"></i></button>
+        </div>
+    </div>    
+
+</section>
+
+<section id="mission-plans">
+
+    <div class="mission--kontener">
+        <h1 class="mission--ha1">MISSIONS PLANIFIÉES</h1>
+<div class="mission--box-container">
+    <div class="mission--box">
+        <h1>Missions Crew Dragon vers l'ISS</h1>
+        <p>Poursuite des vols habités vers la Station spatiale internationale (ISS) en utilisant le vaisseau spatial Crew Dragon. Ces missions sont cruciales pour assurer la continuité de l'approvisionnement de l'ISS et développer des capacités pour les voyages spatiaux habités.</p>
+    </div>
+
+    <div class="mission--box">
+        <h1>Missions Starship vers Mars</h1>
+        <p>Des plans ambitieux pour la colonisation de Mars comprennent l'envoi de missions de ravitaillement, d'exploration, et éventuellement habitées vers la Planète Rouge en utilisant la fusée Starship. SpaceX vise à inaugurer une nouvelle ère d'exploration de Mars.</p>
+    </div>
+
+    <div class="mission--box">
+        <h1>Programme Starlink</h1>
+        <p>Poursuite de l'expansion de la flotte de satellites Starlink dans le cadre du programme Internet. SpaceX prévoit d'introduire des constellations de satellites supplémentaires pour fournir un accès Internet à large bande dans le monde entier.</p>
+    </div>
+
+    <div class="mission--box">
+        <h1>Missions de transport Falcon 9</h1>
+        <p>Vols planifiés et réguliers des fusées Falcon 9 avec diverses charges utiles, y compris des satellites commerciaux, des missions de recherche et des missions de ravitaillement.</p>
+    </div>
+
+    <div class="mission--box">
+        <h1>Exploration de la Lune</h1>
+        <p>Dans le cadre du programme Artemis de la NASA, SpaceX est partenaire pour la réalisation de missions de ravitaillement et habitées vers la Lune. Des missions habitées futures Artemis utilisant le vaisseau spatial Starship sont également planifiées.</p>
+    </div>
+</div>
+
+    </div>   
+
+</section>
+
+<section id="gallery">
+
+    <div class="gallery-container">
+        <div class="mission-gallery-container">
+            <img src="https://blogs.nasa.gov/commercialcrew/wp-content/uploads/sites/230/2020/08/Crew-1_CEITpt2-20200612-DSC05519_2_.jpg" alt="">
+            <img src="https://www.spacex.com/static/images/locations/kennedy.jpg" alt="">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/ORBCOMM-2_%2823282658734%29.jpg" alt="">
+            <img src="https://images.theconversation.com/files/10787/original/54954sbn-1337307547.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip" alt="">
+            <img src="https://www.americaspace.com/wp-content/uploads/2023/09/spacex.jpg" alt="">
+            <img src="https://www.asdnews.com/NewsImages/b/74847/78436_O.jpg" alt="">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Starlink_Mission_%2847926144123%29.jpg" alt="">
+            <img src="https://s.france24.com/media/display/86f0c1da-1683-11ec-a10d-005056a90284/w:980/p:16x9/2021-09-16T000802Z_1015205370_HP1EH9G00DA03_RTRMADP_3_SPACE-EXPLORATION-SPACEX.JPG" alt="">
+            <img src="https://scx2.b-cdn.net/gfx/news/2018/spacexwillus.jpg" alt="">
+            <img src="https://images-assets.nasa.gov/image/jsc2023e037683/jsc2023e037683~medium.jpg" alt="">
+            <img src="https://media.cnn.com/api/v1/images/stellar/prod/200731161100-02-spacex-mission.jpg?q=w_2976,h_2224,x_0,y_0,c_fill" alt="">
+            <img src="https://hips.hearstapps.com/hmg-prod/images/27449863849-709e135a98-o-1517341241.jpg" alt="">
+            <img src="https://images.interestingengineering.com/1200x675/filters:format(webp)/2023/01/17/image/jpeg/hstIa6uTAe6W2pHqjLULfHHJLaS7Gfpjygja859Q.jpg" alt="">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPgMe6ND6rqlIdMJsu2GTzqYAc6hwL4XhgVA&usqp=CAU" alt="">
+            <img src="https://www.dispatch.com/gcdn/authoring/2020/05/27/NCOD/ghows-OH-bb9fe111-9239-46bd-b784-5f68e1c2654a-d7be983f.jpeg?width=660&height=440&fit=crop&format=pjpg&auto=webp" alt="">
+            <img src="https://www.teslarati.com/wp-content/uploads/2020/12/Starship-2019-Mars-reentry-render-SpaceX-1-crop-3-c.jpg" alt="">
+            <img src="https://www.cnet.com/a/img/resize/59aff026a606fa767082eb01bc8af2f2ad99484c/hub/2018/02/08/3dcc95d9-a305-407d-9a7a-5aa80802cf45/screen-shot-2018-02-08-at-12-07-40-pm-1-1.jpg?auto=webp&fit=crop&height=675&width=1200" alt="">
+        </div>  
+    </div>    
+
+</section>
+
+<script src="../js/scriptFR.js"></script>
+</body>
+</html>
